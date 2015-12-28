@@ -1,0 +1,13 @@
+@mixin polyfill-gaoji-set($map) {
+    $ret: ();
+    @each $key, $value in $map {
+        $type: nth($value, 2);
+        @if $type == unquote("#vw") {
+            @include polyfill-easy-set(map-deep-set((), $key, vw(nth($value, 1))));
+        } @else {
+            @include polyfill-easy-set(map-deep-set((), $key, vh(nth($value, 1))));
+        }
+        $ret: map-deep-set($ret, $key, (nth($value, 1) + 0px));
+    }
+    @include rempolyfillset($ret);
+}

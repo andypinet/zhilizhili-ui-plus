@@ -1,0 +1,14 @@
+@mixin use-style-interface() {
+    %default-style-bg-green-and-color-white {
+        color: #ffffff;
+        background-color: get-custom-color("green");
+    }
+    %default-style-bg-blue-and-color-white {
+        color: #ffffff;
+        background-color: get-custom-color("blue");
+    }
+    %default-style-bg-hei-and-color-white {
+        color: #ffffff;
+        background-color: #000000;
+    }
+}

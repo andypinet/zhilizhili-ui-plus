@@ -1,0 +1,13 @@
+@import "../common/shape-interface";
+
+.shape-circle {
+    @extend %shape-circle;
+}
+
+.shape-round-circle {
+    @extend %shape-round-circle;
+}
+
+.shape-circle--5px {
+    @extend %shape-circle--5px;
+}
